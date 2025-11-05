@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kelas Informatika 2023</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #a03c2b;
+            --secondary: #5c2b22;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Tombol navigasi mobile */
+        #mobileMenu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            #navLinks {
+                display: none;
+            }
+
+            #mobileMenu {
+                display: block;
+            }
+
+            #mobileMenuContent {
+                display: none;
+            }
+
+            #mobileMenuContent.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur border-b border-neutral-200 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-[var(--primary)] tracking-wide">
+                Kelas Informatika 2023
+            </a>
+
+            <!-- Menu Desktop -->
+            <div id="navLinks" class="flex items-center gap-6 text-sm md:text-base">
+                <a href="index.html"
+                    class="text-neutral-700 font-medium hover:text-[var(--primary)] transition underline underline-offset-4 decoration-[var(--primary)]">Beranda</a>
+                <a href="mahasiswa.html"
+                    class="text-neutral-700 font-medium hover:text-[var(--primary)] transition">Mahasiswa</a>
+                <a href="struktur.html"
+                    class="text-neutral-700 font-medium hover:text-[var(--primary)] transition">Struktur</a>
+                <a href="maps.html"
+                    class="text-neutral-700 font-medium hover:text-[var(--primary)] transition">Lokasi</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobileMenu" class="text-[var(--primary)] text-3xl font-bold focus:outline-none">&#9776;</button>
+        </div>
+
+        <!-- Menu Dropdown Mobile -->
+        <div id="mobileMenuContent"
+            class="flex-col bg-white/95 backdrop-blur-sm border-t border-neutral-200 shadow-md px-6 py-3 space-y-3 text-center md:hidden">
+            <a href="index.html"
+                class="block text-neutral-700 font-medium hover:text-[var(--primary)] transition">Beranda</a>
+            <a href="mahasiswa.html"
+                class="block text-neutral-700 font-medium hover:text-[var(--primary)] transition">Mahasiswa</a>
+            <a href="struktur.html"
+                class="block text-neutral-700 font-medium hover:text-[var(--primary)] transition">Struktur</a>
+            <a href="maps.html"
+                class="block text-neutral-700 font-medium hover:text-[var(--primary)] transition">Lokasi</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="gradient-bg text-white py-20 mt-[72px] shadow-xl relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/white-diamond.png')] opacity-10">
+        </div>
+        <div class="relative text-center max-w-5xl mx-auto px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 drop-shadow">Kelas Informatika — Angkatan
+                2023</h1>
+            <p class="text-base sm:text-lg text-white/80 mb-4">Selamat datang di halaman resmi kelas Informatika 2023!
+            </p>
+            <a href="mahasiswa.html"
+                class="inline-block bg-white text-[var(--primary)] font-semibold px-6 py-2 rounded-full hover:bg-white/90 transition text-sm sm:text-base">
+                Lihat Daftar Mahasiswa
+            </a>
+        </div>
+    </header>
+
+    <!-- WELCOME -->
+    <section class="max-w-6xl mx-auto px-6 py-16 text-center" data-aos="fade-up">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[var(--primary)] mb-4">Selamat Datang di Kelas Informatika 2023
+        </h2>
+        <p class="text-neutral-700 leading-relaxed max-w-2xl mx-auto text-sm sm:text-base">
+            Kami adalah mahasiswa Informatika angkatan 2023 yang penuh semangat, kreatif, dan siap menghadapi tantangan
+            dunia teknologi. Di sini kamu bisa mengenal kami lebih dekat, melihat galeri kegiatan, dan mengetahui
+            perjalanan seru kami di dunia perkuliahan.
+        </p>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-center text-neutral-800 mb-8">Galeri Kelas</h2>
+
+        <div class="relative">
+            <!-- Tombol kiri -->
+            <button id="prevBtn"
+                class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-[var(--primary)] rounded-full p-3 shadow-md backdrop-blur transition">
+                &#10094;
+            </button>
+
+            <!-- Container foto -->
+            <div id="galleryContainer"
+                class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide pb-4 px-2">
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Semester 1.jpg" alt="Galeri 1"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Semester 2.jpg" alt="Galeri 2"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Semester 2 (2).jpg" alt="Galeri 3"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Pemenang.jpg" alt="Galeri 4"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Pemenang 2.jpg" alt="Galeri 5"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Pemenang 3.jpg" alt="Galeri 6"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="snap-center shrink-0 w-56 sm:w-72 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="images/Foto Bareng Semester 5.jpg" alt="Galeri 7"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+
+            <!-- Tombol kanan -->
+            <button id="nextBtn"
+                class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-[var(--primary)] rounded-full p-3 shadow-md backdrop-blur transition">
+                &#10095;
+            </button>
+        </div>
+    </section>
+
+    <!-- TENTANG KELAS -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 text-center bg-white/70 rounded-3xl shadow-sm"
+        data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">Tentang Kelas</h2>
+        <p class="text-neutral-700 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base mb-8">
+            Kelas Informatika 2023 merupakan kumpulan mahasiswa yang memiliki semangat tinggi dalam dunia teknologi dan
+            pemrograman. Kami belajar bersama, berbagi ilmu, dan saling mendukung agar bisa berkembang sebagai generasi
+            digital yang inovatif.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+        class="bg-gradient-to-t from-[#3b1c15] to-[#6a3a1a] text-white py-10 mt-20 border-t border-[#d9a66c]/30 shadow-inner">
+        <div
+            class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-center text-center md:text-left">
+            <div>
+                <h3 class="font-bold text-lg tracking-wide text-[#ffd28f] mb-2">CREATED BY</h3>
+                <p class="text-gray-200 font-semibold tracking-wide">BLISATHYA</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2 tracking-wide text-[#ffd28f]">FOLLOW US</h3>
+                <p>
+                    <a href="https://www.instagram.com/informatikadps_23" target="_blank"
+                        class="text-gray-300 hover:text-[#ffd28f] transition duration-300">
+                        Instagram
+                    </a>
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2 tracking-wide text-[#ffd28f]">RATE US</h3>
+                <div class="flex flex-col items-center">
+                    <div id="emoji" class="text-4xl mb-2">😐</div>
+                    <input type="range" id="rating" min="0" max="10" step="1" value="5"
+                        class="w-3/4 accent-[#ffd28f] cursor-pointer" />
+                    <div class="text-sm mt-1">
+                        <span id="rateValue" class="text-[#ffd28f]">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-6 border-[#e2b87a]/40" />
+        <p class="text-center text-gray-300 text-sm tracking-wide">
+            © 2025 Kelas Informatika 2023 | Dibuat oleh Mahasiswa Informatika Angkatan 2023
+        </p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        // Toggle menu mobile
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileMenuContent = document.getElementById("mobileMenuContent");
+        mobileMenu.addEventListener("click", () => {
+            mobileMenuContent.classList.toggle("active");
+        });
+
+        // Rating emoji
+        const rating = document.getElementById("rating");
+        const rateValue = document.getElementById("rateValue");
+        const emoji = document.getElementById("emoji");
+        const emojis = ["😡", "😞", "😕", "😐", "🙂", "😊", "😁", "😎", "🤩", "😍", "🥳"];
+        rating.addEventListener("input", () => {
+            const val = rating.value;
+            rateValue.textContent = val + ".0";
+            emoji.textContent = emojis[val];
+        });
+
+        // Galeri scroll tombol + auto loop
+        const gallery = document.getElementById("galleryContainer");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("prevBtn");
+        const scrollAmount = 300;
+
+        function scrollNext() {
+            if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
+                gallery.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                gallery.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            }
+        }
+
+        function scrollPrev() {
+            if (gallery.scrollLeft <= 0) {
+                gallery.scrollTo({ left: gallery.scrollWidth, behavior: "smooth" });
+            } else {
+                gallery.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+            }
+        }
+
+        nextBtn.addEventListener("click", scrollNext);
+        prevBtn.addEventListener("click", scrollPrev);
+
+        setInterval(scrollNext, 4000);
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
+    </script>
+</body>
+
+</html>
