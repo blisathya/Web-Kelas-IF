@@ -223,13 +223,6 @@
                 <blockquote class="mt-3 italic text-neutral-600 text-sm border-l-4 border-[var(--primary)] pl-3 quote">
                 </blockquote>
 
-                <!-- 🎵 Music Player -->
-                <div class="music-player w-full justify-center">
-                    <i class="bi bi-music-note-beamed music-icon"></i>
-                    <button class="play-btn"><i class="bi bi-play-fill"></i></button>
-                    <audio class="student-audio" preload="none"></audio>
-                </div>
-
                 <!-- 🌐 Sosial Media -->
                 <div class="flex justify-center space-x-4 mt-6">
                     <a href="#" class="social-link ig"><i class="bi bi-instagram"></i></a>
@@ -297,45 +290,45 @@
 
         /* === Data Mahasiswa === */
         const students = [
-            { name: 'Ni Putu Candra Aryantini', nim: '2313231001', photo: '/images/candra.jpg', quote: '', music: '', ig: 'https://www.instagram.com/p.candraa__/', tiktok: 'https://www.tiktok.com/@candra.ar23' },
-            { name: 'I Komang Artawan', nim: '2313231002', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'Komang Ayu Trisna Dewi', nim: '2313231003', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/ayutrisnaa_2/', tiktok: 'https://www.tiktok.com/@ayutrisnaa_22' },
-            { name: 'Ni Kadek Ari Kusuma Devi', nim: '2313231004', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/ariikdev/', tiktok: '' },
-            { name: 'Ni Kadek Shilvia Muliyani', nim: '2313231005', photo: '/images/via.png', quote: '', music: '', ig: 'https://www.instagram.com/shilviamlyni_/', tiktok: 'https://www.tiktok.com/@vieyeaaa' },
-            { name: 'Ni Kadek Ayu Sucandra', nim: '2313231006', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'Anak Agung Istri Bintang Pradnyadewi', nim: '2313231008', photo: '/images/gung bintang.png', quote: '', music: '', ig: 'https://www.instagram.com/isgung_bin/', tiktok: 'https://www.tiktok.com/@gungstarsss' },
-            { name: 'Ayu Desi Relia Anggreni', nim: '2313231009', photo: '', quote: '', music: '', ig: '', tiktok: 'https://www.tiktok.com/@reyaxyn' },
-            { name: 'Agus Kadek Dwiq Septiana Putra', nim: '2313231010', photo: '/images/dwiq.png', quote: '', music: '', ig: 'https://www.instagram.com/akdsp._/', tiktok: 'https://www.tiktok.com/@dretorigin' },
-            { name: 'Nelce', nim: '2313231011', photo: '/images/cece.jpeg', quote: '', music: '', ig: 'https://www.instagram.com/01nelce/', tiktok: 'https://www.tiktok.com/@its_ccee' },
-            { name: 'Ketut Ayu Sagita Putri Dinda', nim: '2313231013', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/ssagitaptri/', tiktok: 'https://www.tiktok.com/@sasaaagi' },
-            { name: 'Estin', nim: '2313231014', photo: '/images/estin.jpg', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Gede Sathya Adi Wijaya', nim: '2313231015', photo: '/images/sathya.jpg', quote: 'Waktu mungkin mengubah segalanya, tapi tak akan pernah menghapus apa yang telah kita lalui.', music: 'music/Where We Are - One Direction.mp3', ig: 'https://instagram.com/sathyaaaja/', tiktok: 'https://tiktok.com/@blisathya' },
-            { name: 'Sanggin', nim: '2313231016', photo: '/images/sangging.jpg', quote: '', music: '', ig: 'https://www.instagram.com/phaysa022/', tiktok: 'https://www.tiktok.com/@sa_sa732' },
-            { name: 'I Wayan Edlyn Arsanta Putra', nim: '2313231018', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/wayangedepicaarsanta/', tiktok: 'https://www.tiktok.com/@iwayanedlynarsantaputra' },
-            { name: 'I Gusti Ayu Nirmala Dewi', nim: '2313231019', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Made Aril Linganata', nim: '2313231020', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/linganataaa_/', tiktok: '' },
-            { name: 'Komang Bayu Angga Dukita Pranata', nim: '2313231021', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/km.bayuu/', tiktok: '' },
-            { name: 'Putu Pandu Prayoga Adinata', nim: '2313231022', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Made Dea Herdiana Satrian Putra', nim: '2313231023', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/deaherdiana_/', tiktok: '' },
-            { name: 'I Made Raynaldo Darmayuda', nim: '2313231024', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'Pande Made Angga Murdika', nim: '2313231028', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'Komang Restisya Purnajayanti', nim: '2313231029', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Dewa Agung Gede Kartika Jagaddhita', nim: '2313231030', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Made Bayu Praditya', nim: '2313231031', photo: '/images/bayu praditya.jpg', quote: '', music: '', ig: 'https://www.instagram.com/praditya05._/', tiktok: '' },
-            { name: 'Komang Widya Sri Mahayani', nim: '2313231032', photo: '/images/widya.png', quote: '', music: '', ig: 'https://www.instagram.com/widyamhy/', tiktok: 'https://www.tiktok.com/@weideyea' },
-            { name: 'I Nyoman Cakra Sanjaya', nim: '2313231033', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/cakrasnjya/', tiktok: '' },
-            { name: 'I Wayan Gede Sanathana Dharma', nim: '2313231035', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/nathaann._/', tiktok: '' },
-            { name: 'I Kadek Riska Mahardika', nim: '2313231036', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Kadek Heri Febriantika', nim: '2313231038', photo: '/images/heri.jpg', quote: '', music: '', ig: 'https://www.instagram.com/herifebrian_25/', tiktok: 'https://www.tiktok.com/@herifebriantika20' },
-            { name: 'Made Aditya Candrananda', nim: '2313231039', photo: '/images/aditya.jpg', quote: '', music: '', ig: 'https://www.instagram.com/candrananda_aditya/', tiktok: 'https://www.tiktok.com/@cctvaditya' },
-            { name: 'Anak Agung Rai Gayatri', nim: '2313231040', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'Ni Made Ari Dwipayanti', nim: '2313231041', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/ddwik._/', tiktok: '' },
-            { name: 'I Dewa Ketut Ari Sujana Putra', nim: '2313231042', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'I Ketut Yudatama', nim: '2313231043', photo: '', quote: '', music: '', ig: '', tiktok: '' },
-            { name: 'Ni Wayan Suarningsih', nim: '2313231044', photo: '/images/suarningsih.jpg', quote: '', music: '', ig: 'https://www.instagram.com/suar.ningsih_/', tiktok: 'https://www.tiktok.com/@ssnsuarrr' },
-            { name: 'I Kadek Edho Teguh Sentosa', nim: '2313231046', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/dekedho_/', tiktok: '' },
-            { name: 'I Kadek Andika Dharmabuddha', nim: '2313231047', photo: '/images/andika.png', quote: '', music: '', ig: 'https://www.instagram.com/andikabuda/', tiktok: '' },
-            { name: 'Ida Ayu Made Dewi Putri', nim: '2313231048', photo: '', quote: '', music: '', ig: 'https://www.instagram.com/dayuputri0790/', tiktok: 'https://www.tiktok.com/@putridwi116' }
+            { name: 'Ni Putu Candra Aryantini', nim: '2313231001', photo: '/images/candra.jpg', quote: '',  ig: 'https://www.instagram.com/p.candraa__/', tiktok: 'https://www.tiktok.com/@candra.ar23' },
+            { name: 'I Komang Artawan', nim: '2313231002', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'Komang Ayu Trisna Dewi', nim: '2313231003', photo: '', quote: '',  ig: 'https://www.instagram.com/ayutrisnaa_2/', tiktok: 'https://www.tiktok.com/@ayutrisnaa_22' },
+            { name: 'Ni Kadek Ari Kusuma Devi', nim: '2313231004', photo: '', quote: '',  ig: 'https://www.instagram.com/ariikdev/', tiktok: '' },
+            { name: 'Ni Kadek Shilvia Muliyani', nim: '2313231005', photo: '/images/via.png', quote: '',  ig: 'https://www.instagram.com/shilviamlyni_/', tiktok: 'https://www.tiktok.com/@vieyeaaa' },
+            { name: 'Ni Kadek Ayu Sucandra', nim: '2313231006', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'Anak Agung Istri Bintang Pradnyadewi', nim: '2313231008', photo: '/images/gung bintang.png', quote: '',  ig: 'https://www.instagram.com/isgung_bin/', tiktok: 'https://www.tiktok.com/@gungstarsss' },
+            { name: 'Ayu Desi Relia Anggreni', nim: '2313231009', photo: '', quote: '',  ig: '', tiktok: 'https://www.tiktok.com/@reyaxyn' },
+            { name: 'Agus Kadek Dwiq Septiana Putra', nim: '2313231010', photo: '/images/dwiq.png', quote: '',  ig: 'https://www.instagram.com/akdsp._/', tiktok: 'https://www.tiktok.com/@dretorigin' },
+            { name: 'Nelce', nim: '2313231011', photo: '/images/cece.jpeg', quote: '',  ig: 'https://www.instagram.com/01nelce/', tiktok: 'https://www.tiktok.com/@its_ccee' },
+            { name: 'Ketut Ayu Sagita Putri Dinda', nim: '2313231013', photo: '', quote: '',  ig: 'https://www.instagram.com/ssagitaptri/', tiktok: 'https://www.tiktok.com/@sasaaagi' },
+            { name: 'Estin', nim: '2313231014', photo: '/images/estin.jpg', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Gede Sathya Adi Wijaya', nim: '2313231015', photo: '/images/sathya.jpg', quote: 'Waktu mungkin mengubah segalanya, tapi tak akan pernah menghapus apa yang telah kita lalui.',    ig: 'https://instagram.com/sathyaaaja/', tiktok: 'https://tiktok.com/@blisathya' },
+            { name: 'Sanggin', nim: '2313231016', photo: '/images/sangging.jpg', quote: '',  ig: 'https://www.instagram.com/phaysa022/', tiktok: 'https://www.tiktok.com/@sa_sa732' },
+            { name: 'I Wayan Edlyn Arsanta Putra', nim: '2313231018', photo: '', quote: '',  ig: 'https://www.instagram.com/wayangedepicaarsanta/', tiktok: 'https://www.tiktok.com/@iwayanedlynarsantaputra' },
+            { name: 'I Gusti Ayu Nirmala Dewi', nim: '2313231019', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Made Aril Linganata', nim: '2313231020', photo: '', quote: '',  ig: 'https://www.instagram.com/linganataaa_/', tiktok: '' },
+            { name: 'Komang Bayu Angga Dukita Pranata', nim: '2313231021', photo: '', quote: '',  ig: 'https://www.instagram.com/km.bayuu/', tiktok: '' },
+            { name: 'Putu Pandu Prayoga Adinata', nim: '2313231022', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Made Dea Herdiana Satrian Putra', nim: '2313231023', photo: '', quote: '',  ig: 'https://www.instagram.com/deaherdiana_/', tiktok: '' },
+            { name: 'I Made Raynaldo Darmayuda', nim: '2313231024', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'Pande Made Angga Murdika', nim: '2313231028', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'Komang Restisya Purnajayanti', nim: '2313231029', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Dewa Agung Gede Kartika Jagaddhita', nim: '2313231030', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Made Bayu Praditya', nim: '2313231031', photo: '/images/bayu praditya.jpg', quote: '',  ig: 'https://www.instagram.com/praditya05._/', tiktok: '' },
+            { name: 'Komang Widya Sri Mahayani', nim: '2313231032', photo: '/images/widya.png', quote: '',  ig: 'https://www.instagram.com/widyamhy/', tiktok: 'https://www.tiktok.com/@weideyea' },
+            { name: 'I Nyoman Cakra Sanjaya', nim: '2313231033', photo: '', quote: '',  ig: 'https://www.instagram.com/cakrasnjya/', tiktok: '' },
+            { name: 'I Wayan Gede Sanathana Dharma', nim: '2313231035', photo: '', quote: '',  ig: 'https://www.instagram.com/nathaann._/', tiktok: '' },
+            { name: 'I Kadek Riska Mahardika', nim: '2313231036', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Kadek Heri Febriantika', nim: '2313231038', photo: '/images/heri.jpg', quote: '',  ig: 'https://www.instagram.com/herifebrian_25/', tiktok: 'https://www.tiktok.com/@herifebriantika20' },
+            { name: 'Made Aditya Candrananda', nim: '2313231039', photo: '/images/aditya.jpg', quote: '',  ig: 'https://www.instagram.com/candrananda_aditya/', tiktok: 'https://www.tiktok.com/@cctvaditya' },
+            { name: 'Anak Agung Rai Gayatri', nim: '2313231040', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'Ni Made Ari Dwipayanti', nim: '2313231041', photo: '', quote: '',  ig: 'https://www.instagram.com/ddwik._/', tiktok: '' },
+            { name: 'I Dewa Ketut Ari Sujana Putra', nim: '2313231042', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'I Ketut Yudatama', nim: '2313231043', photo: '', quote: '',  ig: '', tiktok: '' },
+            { name: 'Ni Wayan Suarningsih', nim: '2313231044', photo: '/images/suarningsih.jpg', quote: '',  ig: 'https://www.instagram.com/suar.ningsih_/', tiktok: 'https://www.tiktok.com/@ssnsuarrr' },
+            { name: 'I Kadek Edho Teguh Sentosa', nim: '2313231046', photo: '', quote: '',  ig: 'https://www.instagram.com/dekedho_/', tiktok: '' },
+            { name: 'I Kadek Andika Dharmabuddha', nim: '2313231047', photo: '/images/andika.png', quote: '',  ig: 'https://www.instagram.com/andikabuda/', tiktok: '' },
+            { name: 'Ida Ayu Made Dewi Putri', nim: '2313231048', photo: '', quote: '',  ig: 'https://www.instagram.com/dayuputri0790/', tiktok: 'https://www.tiktok.com/@putridwi116' }
         ];
 
         const grid = document.getElementById('grid');
