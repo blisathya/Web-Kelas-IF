@@ -301,7 +301,7 @@
                 const img = clone.querySelector('img');
 
                 // 🔹 jika tidak ada foto, tampilkan gambar guest default
-                const defaultPhoto = 'https://i.ibb.co/5GzXkwq/guest-user.png'; // ubah sesuai file kamu
+                const defaultPhoto = ''; // ubah sesuai file kamu
                 img.src = s.photo && s.photo.trim() !== '' ? s.photo : defaultPhoto;
                 img.onerror = () => img.src = defaultPhoto; // jika file rusak, tetap pakai guest
 
