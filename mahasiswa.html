@@ -60,46 +60,6 @@
             color: #000000;
         }
 
-        .music-player {
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 1rem;
-            backdrop-filter: blur(10px);
-            padding: 10px 14px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .music-player:hover {
-            background: rgba(255, 255, 255, 0.6);
-        }
-
-        .music-icon {
-            font-size: 1.6rem;
-            color: var(--primary);
-            animation: pulseMusic 2s infinite;
-        }
-
-        .music-player button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .music-player button:hover {
-            background: var(--secondary);
-        }
-
         @keyframes pulseMusic {
 
             0%,
@@ -353,31 +313,6 @@
                 const tiktok = clone.querySelector('.tiktok');
                 if (s.ig) ig.href = s.ig; else ig.style.display = 'none';
                 if (s.tiktok) tiktok.href = s.tiktok; else tiktok.style.display = 'none';
-
-                const audio = clone.querySelector('.student-audio');
-                const playBtn = clone.querySelector('.play-btn');
-                if (s.music) audio.src = s.music;
-                else {
-                    playBtn.style.display = 'none';
-                    clone.querySelector('.music-icon').style.opacity = '0.3';
-                }
-
-                playBtn.addEventListener('click', () => {
-                    document.querySelectorAll('audio').forEach(a => {
-                        if (a !== audio) { a.pause(); a.currentTime = 0; }
-                    });
-                    if (audio.paused) {
-                        audio.play();
-                        playBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
-                    } else {
-                        audio.pause();
-                        playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
-                    }
-                });
-
-                audio.addEventListener('ended', () => {
-                    playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
-                });
 
                 grid.appendChild(clone);
             });
